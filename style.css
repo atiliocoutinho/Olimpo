@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "CinzelDecorative";
+  src: url("fonts/CinzelDecorative-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Cinzel-Regular";
+  src: url("fonts/Cinzel-Regular.otf") format("opentype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 90% dvw;
+  font-family: "Cinzel-Regular";
+  line-height: 1.6;
+  color: #171738;
+  background: linear-gradient(to bottom, #ffffff 0%, #b5d0fb 100%);
+  background-attachment: fixed;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1dvh 4dvw;
+  background: rgba(42, 42, 101, 0.368627451);
+}
+
+.nav-brand {
+  font-family: "CinzelDecorative";
+  font-weight: bold;
+  font-size: 2dvw;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 5dvw;
+  font-size: 1.6dvw;
+}
+
+.nav-menu a {
+  color: #171738;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #fcfcfc;
+}
+
+.reserve {
+  color: #171738;
+  border: solid 2px #171738;
+  padding: 1dvw 2dvw;
+  font-size: 1.6dvw;
+  text-decoration: none;
+}
+
+.reserve:hover {
+  background-color: #171738;
+  color: #fcfcfc;
+}
+
+main {
+  background-color: #171738;
+  height: 50dvw;
+  padding-top: 5dvh;
+}
+
+.exibição {
+  text-align: center;
+  margin-bottom: 4dvw;
+}
+
+h4 {
+  color: rgba(252, 252, 252, 0.7568627451);
+  font-size: 1.5dvw;
+}
+
+h3 {
+  color: #d7d6ff;
+  font-family: "CinzelDecorative";
+  font-size: 2dvw;
+}
+
+h3:hover {
+  transform: scale(1.1);
+  color: #e0e0ff;
+  transition: 1s;
+}
+
+.carrossel {
+  width: 100%;
+  margin-bottom: 2dvh;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.carrossel > img {
+  border-radius: 2.5dvw 6dvw 2.5dvw 6dvw;
+  width: 20dvw;
+  height: 32dvw;
+  padding-left: 1dvw;
+  padding-bottom: 1dvw;
+  white-space: nowrap;
+  display: inline-block;
+  animation: slide 25s infinite linear;
+  transition: opacity 1s;
+}
+
+.carrossel::before,
+.carrossel::after {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(to right, hsla(240, 41%, 28%, 0.6), transparent);
+  z-index: 1;
+}
+
+.carrossel::before {
+  left: 0;
+}
+
+.carrossel::after {
+  right: 0;
+  background: linear-gradient(to left, hsla(240, 41%, 28%, 0.8), transparent);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+section {
+  padding: 5dvw;
+  font-size: 1.3dvw;
+  text-align: center;
+}
+
+footer {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1dvw;
+  color: #fcfcfc;
+  text-align: center;
+  padding: 1dvw;
+  background: rgba(42, 42, 101, 0.368627451);
+}/*# sourceMappingURL=style.css.map */
